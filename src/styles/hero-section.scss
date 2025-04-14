@@ -1,0 +1,71 @@
+.hero {
+  // height: 100vh;
+  // background: url('/spidy.jpg') no-repeat center;
+  // background-color: #030303;
+  // position: relative;
+  // display: flex;
+  // align-items: center;
+  // background-position: 50% 15%;
+  // background-size: 90%;
+  background: 
+    linear-gradient(to bottom, rgba(3, 3, 3, 0) 50%, #030303 100%),
+    url('/batman-hero.png') no-repeat top center;
+  background-size: 50%;
+  background-color: #030303;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background-position-y: 20%;
+  background-position-x: right;
+  margin-bottom: 200px;
+
+  .content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 32px;
+    display: grid;
+    gap: 3rem;
+    justify-items: flex-start;
+    margin: auto auto;
+
+    h1 {
+      font-family: var(--font-rozha);
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    }
+
+    p {
+      font-family: var(--font-roboto);
+        font-family: Roboto;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: 0%;
+
+
+    }
+
+    button {
+      background: #F0141E;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-family: var(--font-roboto);
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.3s;
+      font-size: 24px;
+
+      &:hover {
+        background: #b71c1c;
+      }
+    }
+  }
+}

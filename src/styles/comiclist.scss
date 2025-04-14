@@ -1,0 +1,187 @@
+// Main container
+.comics{
+  padding: 8rem 0;
+}
+.dc-comic {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 32px;
+
+  h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 96px;
+    font-weight: 400;
+    font-family: var(--font-rozha);
+  }
+}
+
+// Grid layout
+.comics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+// Modal styles
+.comic-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+
+  .modal-content {
+    background: #111;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #e62429;
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+   
+    img {
+      max-width: 250px;
+      margin-top: 25px;
+      transition: transform 0.3s ease;
+    }
+  
+    .modal-details {
+      padding: 2rem;
+      color: white;
+
+      h2 {
+        color: #e62429;
+        margin-top: 0;
+        font-size: 40px;
+        margin-bottom: 1rem;
+      }
+
+      .details-meta {
+        display: flex;
+        gap: 1.5rem;
+        margin: 1rem 0;
+        color: #ccc;
+      }
+
+      .comic-description {
+        line-height: 1.6;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+// Marvel-themed select box
+.villain-select {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+  font-family: 'Bebas Neue', 'Arial Narrow', sans-serif; // Comic book style font
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  align-items: center;
+
+  p{
+    color:#fff;
+    font-size: 24px;
+    font-weight: 400;
+  }
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 30%;
+    padding: 0.8rem 2.5rem 0.8rem 1rem;
+    font-size: 1.1rem;
+    color: #333;
+    background-color: white;
+    border: 2px solid #f0141e; // Marvel red border
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    // Focus state
+    &:focus {
+      outline: none;
+      border-color: darken(#f0141e, 10%);
+      box-shadow: 0 0 0 2px rgba(240, 20, 30, 0.2);
+    }
+
+    // Hover state
+    &:hover {
+      border-color: darken(#f0141e, 15%);
+    }
+
+    // Disabled state
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+
+  // Custom dropdown arrow
+  &::after {
+    content: "▼";
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    color: #f0141e;
+    pointer-events: none;
+    font-size: 0.8rem;
+  }
+
+  // Options styling
+  option {
+    padding: 0.5rem;
+    background: white;
+    color: #333;
+
+    // Hover state for options (works in some browsers)
+    &:hover {
+      background-color: #f0141e;
+      color: white;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .comics-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .comic-card .comic-info h3 {
+    font-size: 1rem;
+  }
+}

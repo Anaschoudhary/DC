@@ -1,0 +1,39 @@
+.latest-news {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 32px;
+    color: #fff;
+
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-left: 0.75rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  &__image {
+    width: 140px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__title {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
