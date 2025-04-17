@@ -1,11 +1,6 @@
 require('dotenv').config();
 import axios from "axios";
 
-
-
-// const API_KEY = "88b9ce047cccc910a8e2def40bfccbe79ef5614b";
-// const BASE_URL = "https://www.comicvine.gamespot.com/api/";
-
 const API_KEY = process.env.API_KEY;  
 const BASE_URL = process.env.BASE_URL;
 
